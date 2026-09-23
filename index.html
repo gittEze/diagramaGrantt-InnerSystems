@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Diagrama de Gantt de Inner Systems">
+		<meta name="theme-color" content="#e87524">
+		<title>Inner Systems | Diagrama de Gantt</title>
+
+		<link rel="shortcut icon" href="IMG/icon.png" type="image/x-icon">
+		<link rel="stylesheet" href="CSS/style.css">
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="headerContent">
+				<div class="brand">
+					<div class="brandIcon">
+						<img src="IMG/logo.png" alt="Inner Systems">
+					</div>
+
+					<div class="brandText">
+						<h1>Inner Systems</h1>
+					</div>
+				</div>
+
+				<div class="headerActions">
+					<button class="btn btnSecondary" id="btnToday">Hoy</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="toolbar">
+				<div class="toolbarGroup">
+					<div class="viewTitle">
+						<h2>Diagrama de Gantt</h2>
+						<span>Aprendomo 2026</span>
+					</div>
+				</div>
+
+				<div class="toolbarGroup toolbarActions">
+					<button class="btn btnSmall" id="btnExportCSV">CSV</button>
+					<button class="btn btnSmall" id="btnExportPNG">PNG</button>
+					<button class="btn btnSmall" id="btnExportPDF">PDF</button>
+				</div>
+			</section>
+
+			<section class="summary">
+				<div class="summaryCard">
+					<span class="summaryLabel">Actividades</span>
+					<strong id="totalTasks">0</strong>
+				</div>
+
+				<div class="summaryCard">
+					<span class="summaryLabel">Pendientes</span>
+					<strong id="pendingTasks">0</strong>
+				</div>
+
+				<div class="summaryCard">
+					<span class="summaryLabel">En progreso</span>
+					<strong id="progressTasks">0</strong>
+				</div>
+
+				<div class="summaryCard">
+					<span class="summaryLabel">Completadas</span>
+					<strong id="completedTasks">0</strong>
+				</div>
+
+				<div class="summaryCard">
+					<span class="summaryLabel">Con retraso</span>
+					<strong id="lateTasks">0</strong>
+				</div>
+			</section>
+
+			<section class="ganttContainer" id="ganttExport">
+				<div class="ganttHeader">
+					<div class="taskHeader">Actividad</div>
+					<div class="calendarHeader" id="calendarHeader"></div>
+				</div>
+
+				<div class="ganttBody" id="ganttBody"></div>
+
+				<div class="emptyState" id="emptyState">
+					<div class="emptyIcon">▦</div>
+					<h3>No hay actividades</h3>
+					<p>Agregá actividades desde el archivo JavaScript.</p>
+				</div>
+			</section>
+
+			<section class="legend">
+				<div class="legendTitle">Referencia</div>
+
+				<div class="legendItem">
+					<span class="legendColor planned"></span>
+					<span>Planificado</span>
+				</div>
+
+				<div class="legendItem">
+					<span class="legendColor progress"></span>
+					<span>En progreso</span>
+				</div>
+
+				<div class="legendItem">
+					<span class="legendColor completed"></span>
+					<span>Completado</span>
+				</div>
+
+				<div class="legendItem">
+					<span class="legendColor delayed"></span>
+					<span>Finalizado con retraso</span>
+				</div>
+
+				<div class="legendItem">
+					<span class="todayLine"></span>
+					<span>Hoy</span>
+				</div>
+			</section>
+		</main>
+
+		<div class="taskDetailsOverlay" id="detailsModal">
+			<div class="taskDetails">
+				<div class="modalHeader">
+					<div>
+						<h2 id="detailsTitle">Actividad</h2>
+						<span id="detailsStatus">Estado</span>
+					</div>
+
+					<button class="modalClose" id="btnCloseDetails">&times;</button>
+				</div>
+
+				<div class="detailsContent">
+					<div class="detailsProgress">
+						<div class="detailsProgressHeader">
+							<span>Progreso</span>
+							<strong id="detailsProgressValue">0%</strong>
+						</div>
+
+						<div class="progressTrack">
+							<div class="progressFill" id="detailsProgressBar"></div>
+						</div>
+					</div>
+
+					<div class="detailsGrid">
+						<div class="detailItem">
+							<span>Inicio</span>
+							<strong id="detailsStart">—</strong>
+						</div>
+
+						<div class="detailItem">
+							<span>Fecha límite</span>
+							<strong id="detailsDeadline">—</strong>
+						</div>
+
+						<div class="detailItem">
+							<span>Finalización</span>
+							<strong id="detailsFinish">—</strong>
+						</div>
+
+						<div class="detailItem">
+							<span>Responsable</span>
+							<strong id="detailsResponsible">—</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="toast" id="toast">
+			<span id="toastMessage"></span>
+		</div>
+
+		<footer class="footer">
+			<span>Inner Systems</span>
+			<span>Planificación del proyecto Aprendomo</span>
+			<span>2026</span>
+		</footer>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+		<script src="JS/script.js"></script>
+	</body>
+</html>
