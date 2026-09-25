@@ -133,7 +133,7 @@ const initialTasks = [
 		responsible: "Thiago García"
 	}
 	,{
-		name: "Implementar método COCOMO (Documentación)", 		//LISTO
+		name: "Implementar método COCOMO II (Documentación)", 		//LISTO
 		start: "2026-08-10",
 		deadline: "2026-08-17",
 		finish: "2026-08-25",
@@ -173,12 +173,28 @@ const initialTasks = [
 		responsible: "Ezequiel Albornoz, Thiago García, Lucas Silva"
 	}
 	,{
-		name: "Validar coherencia y tipo de dato en los formularios de inicio de sesión y de registrarse para colocar el dato correcto", 		//LISTO
-		start: "2026-09-25",
-		deadline: "2026-09-31",
-		finish: null,
-		status: "pending",
-		responsible: "Ezequiel Albornoz, Thiago García, Lucas Silva"
+		name: "Confirmación de mensaje de registro en el inicio sesión.", 		//LISTO
+		start: "2026-09-18",
+		deadline: "2026-09-25",
+		finish: "2026-09-23",
+		status: "completed",
+		responsible: "Thiago García"
+	}
+	,{
+		name: "Creación del espacio dentro del curso seleccionado", 		//LISTO
+		start: "2026-09-18",
+		deadline: "2026-09-25",
+		finish: "2026-09-24",
+		status: "completed",
+		responsible: "Thiago García"
+	}
+	,{
+		name: "Implementar la carga de archivos dentro los cursos, para los docentes.", 		//LISTO
+		start: "2026-09-18",
+		deadline: "2026-09-25",
+		finish: "2026-09-25",
+		status: "completed",
+		responsible: "Thiago García"
 	}
 ];
 
