@@ -195,6 +195,55 @@ const initialTasks = [
 		finish: "2026-09-25",
 		status: "completed",
 		responsible: "Thiago García"
+	},{
+		name: "Implementar POO en el proyecto.", 		//LISTO
+		start: "2026-10-13",
+		deadline: "2026-10-20",
+		finish: "2026-10-19",
+		status: "completed",
+		responsible: "Ezequiel Albornoz"
+	},{
+		name: "Implementar botón 'Crear Tarea', publica las tareas dentro del curso.", 		//LISTO
+		start: "2026-10-15",
+		deadline: "2026-10-22",
+		finish: "2026-10-26",
+		status: "completed",
+		responsible: "Lucas Silva"
+	},{
+		name: "Implementar PHPMailer en los archivos consreg.php, crecur.php e inscripcion.php para enviar notificaciones por correo.", 		//LISTO
+		start: "2026-10-13",
+		deadline: "2026-10-20",
+		finish: "2026-10-24",
+		status: "completed",
+		responsible: "Thiago García"
+	},{
+		name: "Implementar una verificación en consreg.php para evitar correos duplicados en el registro, comprobando que el SELECT de correos existentes devuelva menos de 1 resultado.", 		//LISTO
+		start: "2026-10-14",
+		deadline: "2026-10-25",
+		finish: "2026-10-23",
+		status: "completed",
+		responsible: "Thiago García"
+	},{
+		name: "Implementar sistema de transporte de cursos con operaciones para agregar, quitar e inscribir, incluido página del transporte e integración con el menú.", 		//LISTO
+		start: "2026-10-14",
+		deadline: "2026-10-25",
+		finish: "2026-10-24",
+		status: "completed",
+		responsible: "Ezequiel Albornoz"
+	},{
+		name: "Introducir SDK para el uso de Paypal.", 		//LISTO
+		start: "2026-10-14",
+		deadline: "2026-10-25",
+		finish: "2026-10-24",
+		status: "completed",
+		responsible: "Thiago García"
+	},{
+		name: "Creación de un panel administrador solo visible para los usuarios con rol Administrador.", 		//LISTO
+		start: "2026-10-14",
+		deadline: "2026-10-25",
+		finish: "2026-10-27",
+		status: "completed",
+		responsible: "Thiago García"
 	}
 ];
 
